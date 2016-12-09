@@ -1,8 +1,13 @@
 from subprocess import call
 import re
 import csv
+import sys
 
-call(["pdf2txt.py", "-t", "tag", "-o", "output", "att1.pdf"])
+if len(sys.argv) != 2:
+	print "Format: "+sys.argv[0]+" [PDF file]"
+	sys.exit()
+
+call(["pdf2txt.py", "-t", "tag", "-o", "output", sys.argv[1]])
 
 raw = open("output").read()
 
