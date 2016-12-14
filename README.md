@@ -3,3 +3,6 @@ _This is a personal project that reads AT&T group plan bills and send out automa
 
 Samuel
 
+Usage:
+
+	python main.py attbill.pdf
